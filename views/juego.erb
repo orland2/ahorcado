@@ -8,5 +8,9 @@
 <body>
     <h1 id="nombre">Juego del ahorcado</h1>
     <div id="resultado"><%=@texto_ahorcado%></div>
+    <form action="/juego" method="post">
+        <input type="text" name="letra" id="letra"/>
+        <input type="submit" value="Jugar"/>
+    </form>
 </body>
 </html>

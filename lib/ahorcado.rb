@@ -1,7 +1,7 @@
 
 class Ahorcado
-    def jugar
-    "a"
+    def jugar(letra)
+        letra
     end
 end
 
