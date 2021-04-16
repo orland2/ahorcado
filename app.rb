@@ -8,6 +8,6 @@ end
 
 post '/juego' do 
     ahorcado = Ahorcado.new
-    @texto_ahorcado = ahorcado.jugar()
+    @texto_ahorcado = ahorcado.jugar(params[:letra])
     erb :juego
 end

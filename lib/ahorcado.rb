@@ -1,7 +1,17 @@
 
 class Ahorcado
+     def initialize()
+        @palabra_secreta = "s"
+     end
+   
     def jugar(letra)
-        letra
+
+        if @palabra_secreta == letra 
+            letra
+        else 
+            "_"
+        end 
+        
     end
 end
 
