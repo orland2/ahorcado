@@ -2,16 +2,16 @@ Feature: Inicio de la aplicación
 
     Esta aplicación se invoca desde la pagina de Kleer
 
-    Scenario: Inicia la aplicacion
+    Scenario: inicio la aplicacion
     When inicio la aplicacion
-    Then el titulo es "Chatea con Kleer"
+    Then el titulo es "Bienvenido a Ahorcado"
 
-    Scenario: Saluda al iniciar
+    Scenario: Muestra una letra
     Given inicio la aplicacion
-    When inicio el chat
-    Then el mensaje 1 es "Hola"
+    When inicio el juego
+    Then muestra la letra "a"
 
-    Scenario: ofrecer ayuda
-    Given inicio la aplicacion
-    When usuario se equivoca
-    Then redirige a pagina "ayuda"
+    # Scenario: Echo de una letra
+    # Given inicio la aplicacion
+    # When escribe la letra "a"
+    # Then muestra la letra "a"
