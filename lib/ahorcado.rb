@@ -1,21 +1,22 @@
 
 class Ahorcado
-    def initialize()
+     def initialize()
         @palabra_secreta = "scrum"
-    end
+        @respuesta = "_____"
+     end
    
-    def jugar(letra)
-        respuesta = ""
-        largo = @palabra_secreta.length - 1
-        for i in 0..largo
-            if @palabra_secreta[i] == letra
-                respuesta += letra
-            else
-                respuesta += "_"
-            end
-        end
-        respuesta      
-    end
+     def jugar(letra)
+         largo = @palabra_secreta.length - 1
+         for i in 0..largo
+             if @palabra_secreta[i] == letra
+                @respuesta[i] = letra;
+             end
+         end
+         respuesta
+     end
+   
+     def respuesta()
+         @respuesta
+     end
 
 end
-

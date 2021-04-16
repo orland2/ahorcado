@@ -11,3 +11,13 @@ Feature: Inicio de la aplicación
     When inicio el juego
     And escribe la letra "r"
     Then muestra "__r__"
+
+    Scenario: Acierta la palabra completa
+    Given inicio la aplicacion
+    When inicio el juego
+    And escribe la letra "s"
+    And escribe la letra "c"
+    And escribe la letra "r"
+    And escribe la letra "u"
+    And escribe la letra "m"
+    Then muestra "scrum"

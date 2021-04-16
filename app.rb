@@ -1,13 +1,15 @@
 require 'sinatra'
 require './config'
 require './lib/ahorcado.rb'
+enable :sessions
 
 get '/' do 
+    session[:ahorcado] = Ahorcado.new()
     erb :inicio
 end
 
 post '/juego' do 
-    ahorcado = Ahorcado.new
-    @texto_ahorcado = ahorcado.jugar(params[:letra])
+    session[:ahorcado].jugar(params[:letra])
+    @texto_ahorcado = session[:ahorcado].respuesta()
     erb :juego
 end
