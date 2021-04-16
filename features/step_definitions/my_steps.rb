@@ -11,8 +11,8 @@ When("inicio el juego") do
     click_button "Empezar"
 end
 
-Then("muestra la letra {string}") do |letra|
-    expect(page).to have_css "div#resultado", text: letra
+Then("muestra {string}") do |palabra|
+    expect(page).to have_css "div#resultado", text: palabra
 end
 
 When("escribe la letra {string}") do |letra|

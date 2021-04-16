@@ -2,14 +2,9 @@ require "./lib/ahorcado"
 
 describe Ahorcado do
 
-    it "Acierta con la letra s" do
+    it "Acierta la r de scrum" do
         ahorcado = Ahorcado.new()
-        expect(ahorcado.jugar("s")).to eq "s"
-    end
-
-    it "Erra con la letra f" do
-        ahorcado = Ahorcado.new()
-        expect(ahorcado.jugar("f")).to eq "_"
+        expect(ahorcado.jugar("r")).to eq "__r__"
     end
 
 end
